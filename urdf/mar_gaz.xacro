@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<robot name="mar_gaz" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find mar_gaz_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find mar_gaz_description)/urdf/mar_gaz.trans" />
+<xacro:include filename="$(find mar_gaz_description)/urdf/mar_gaz.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.3129707386364697 0.5188338039965884 -0.15768757544095305" rpy="0 0 0"/>
+    <mass value="1079.4328794798214"/>
+    <inertia ixx="186.013731" iyy="86.896036" izz="224.575808" ixy="-0.308707" iyz="-0.695055" ixz="0.061475"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mar_gaz_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mar_gaz_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Paddle_wheel_1">
+  <inertial>
+    <origin xyz="0.03236204560109679 0.0018852799025214084 -0.0009367968213885858" rpy="0 0 0"/>
+    <mass value="9.6357850266041"/>
+    <inertia ixx="0.16825" iyy="0.100147" izz="0.072708" ixy="-4.6e-05" iyz="0.015816" ixz="2.4e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.66 -0.5625 0.17" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mar_gaz_description/meshes/Paddle_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.66 -0.5625 0.17" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mar_gaz_description/meshes/Paddle_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Paddle_wheel_2_1">
+  <inertial>
+    <origin xyz="-0.03236204560109684 -0.0013299145829284154 0.0016319300835448136" rpy="0 0 0"/>
+    <mass value="9.635785026604104"/>
+    <inertia ixx="0.16825" iyy="0.107365" izz="0.065491" ixy="-3.2e-05" iyz="9.5e-05" ixz="4.1e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.04 -0.5625 0.17" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mar_gaz_description/meshes/Paddle_wheel_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.04 -0.5625 0.17" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mar_gaz_description/meshes/Paddle_wheel_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Revolute_1" type="continuous">
+  <origin xyz="0.66 0.5625 -0.17" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Paddle_wheel_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Revolute_2" type="continuous">
+  <origin xyz="-0.04 0.5625 -0.17" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Paddle_wheel_2_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+</robot>
