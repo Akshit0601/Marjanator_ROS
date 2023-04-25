@@ -3,7 +3,7 @@
 
 An ROS-enabled automated USV designed to automate the process of cleaning large lakes
 
-# Capabilities
+## Capabilities
 1. Automated cleaning using smart detection using detection model based on openCV and yoloV5(will be release soon)
 
 2. Mapping - It can also be used for mapping 
