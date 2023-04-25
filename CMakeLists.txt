@@ -9,5 +9,7 @@ catkin_package()
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
    src/cmd_vel_sub.py
+   src/remap.py
+   src/return.py
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
