@@ -25,6 +25,7 @@ Install dependencies using rosdep
 ```
     
 ## Running
+#### uploading arduino code in src/ros_marja.ino
 ### sourcing the workspace
 ```bash
 source [workspace path]/devel/setup.sh
