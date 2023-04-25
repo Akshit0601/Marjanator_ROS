@@ -27,7 +27,7 @@ Install dependencies using rosdep
 ## Running
 ### sourcing the workspace
 ```bash
-Source [workspace path]/devel/setup.sh
+source [workspace path]/devel/setup.sh
 ```
  ### Launching gazebo simulation 
 
