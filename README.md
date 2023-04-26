@@ -33,7 +33,7 @@ source [workspace path]/devel/setup.sh
  ### Launching gazebo simulation 
 
  ```bash
- roslaunch mar_gaz_description
+ roslaunch mar_gaz_description gazebo.launch
  ```
 
  ### Launch Teleop_Twist_keyboard
