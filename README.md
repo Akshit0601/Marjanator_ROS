@@ -51,9 +51,13 @@ rosrun rosserail_arduino serial_node.py __path:=/dev/cu.modem1101
 rosrun mar_gaz_description remap.py 
 rosrun turtlesim turtlesim_node
 ```
-
+### To get IMU data
+```bash
+rostopic echo /imu
+```
 ## 🔗 Links
 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/akshit-shishodia-631aab23a/)
+
 
 
