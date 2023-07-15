@@ -38,7 +38,7 @@ source [workspace path]/devel/setup.sh
 
  ### Launch Teleop_Twist_keyboard
 ```bash
-rosrun Teleop_Twist_keyboard Teleop_Twist_keyboard.py cmd_vel := mobile_base_controller/cmd_vel
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py cmd_vel := mobile_base_controller/cmd_vel
 ```
 ### Launching Serial Node
 ```bash
